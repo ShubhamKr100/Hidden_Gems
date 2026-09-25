@@ -26,7 +26,7 @@ function MyKitchenPage() {
         };
 
         const { data } = await axios.get(
-          'http://localhost:5000/api/host/myprofile',
+          'https://hidden-gems-backend-q048.onrender.com/api/host/myprofile',
           config
         );
 
@@ -140,7 +140,7 @@ export default MyKitchenPage;
 
 //         // 3. Backend API ko call karo
 //         const { data } = await axios.get(
-//           'http://localhost:5000/api/host/myprofile',
+//           'https://hidden-gems-backend-q048.onrender.com/api/host/myprofile',
 //           config
 //         );
 

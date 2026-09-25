@@ -15,7 +15,7 @@ function HomePage() {
         setLoading(true);
         setError(null);
 
-        const { data } = await axios.get('http://localhost:5000/api/host/featured');
+        const { data } = await axios.get('https://hidden-gems-backend-q048.onrender.com/api/host/featured');
         setHosts(data);
         
       } catch (err) {
@@ -87,7 +87,7 @@ export default HomePage;
 // //   useEffect(() => {
 // //     const fetchSpots = async () => {
 // //       try {
-// //         const response = await axios.get('http://localhost:5000/api/spots');
+// //         const response = await axios.get('https://hidden-gems-backend-q048.onrender.com/api/spots');
 
 
 // //     // V V V YEH NAYI LINE ADD KAREIN V V V
@@ -156,7 +156,7 @@ export default HomePage;
 // //   useEffect(() => {
 // //     const fetchSpots = async () => {
 // //       try {
-// //         const response = await axios.get('http://localhost:5000/api/spots');
+// //         const response = await axios.get('https://hidden-gems-backend-q048.onrender.com/api/spots');
 
 
 // //     // V V V YEH NAYI LINE ADD KAREIN V V V
@@ -235,8 +235,8 @@ export default HomePage;
 //         setError(null);
 
 //         // Dono API calls ek saath karein
-//         const spotPromise = axios.get('http://localhost:5000/api/spots');
-//         const hostPromise = axios.get('http://localhost:5000/api/host/featured');
+//         const spotPromise = axios.get('https://hidden-gems-backend-q048.onrender.com/api/spots');
+//         const hostPromise = axios.get('https://hidden-gems-backend-q048.onrender.com/api/host/featured');
 
 //         const [spotResponse, hostResponse] = await Promise.all([
 //           spotPromise,

@@ -22,7 +22,7 @@ function Navbar() {
             },
           };
           const { data } = await axios.get(
-            'http://localhost:5000/api/bookings/host/pending-count',
+            'https://hidden-gems-backend-q048.onrender.com/api/bookings/host/pending-count',
             config
           );
           setPendingBookingCount(data.count);

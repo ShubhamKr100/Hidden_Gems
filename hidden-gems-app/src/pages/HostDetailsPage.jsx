@@ -55,8 +55,8 @@ function HostDetailsPage() {
                 
                 // Parallel requests for speed
                 const [hostResponse, reviewResponse] = await Promise.all([
-                    axios.get(`http://localhost:5000/api/host/${id}`),
-                    axios.get(`http://localhost:5000/api/hosts/${id}/reviews`)
+                    axios.get(`https://hidden-gems-backend-q048.onrender.com/api/host/${id}`),
+                    axios.get(`https://hidden-gems-backend-q048.onrender.com/api/hosts/${id}/reviews`)
                 ]);
 
                 setProfile(hostResponse.data);
@@ -79,7 +79,7 @@ function HostDetailsPage() {
             if (!userInfo) return;
             try {
                 const config = { headers: { Authorization: `Bearer ${userInfo.token}` } };
-                const { data } = await axios.get('http://localhost:5000/api/users/profile', config);
+                const { data } = await axios.get('https://hidden-gems-backend-q048.onrender.com/api/users/profile', config);
                 setUserProfile(data);
             } catch (err) {
                 console.error('User profile fetch failed', err);
@@ -121,7 +121,7 @@ function HostDetailsPage() {
     const handleSummarize = async () => {
         setAiLoading(true);
         try {
-            const { data } = await axios.post('http://localhost:5000/api/ai/summarize', { hostId: id });
+            const { data } = await axios.post('https://hidden-gems-backend-q048.onrender.com/api/ai/summarize', { hostId: id });
             setSummary(data.summary);
         } catch (error) {
             console.error(error);
@@ -170,7 +170,7 @@ function HostDetailsPage() {
                 totalPrice: totalPrice,
             };
 
-            await axios.post('http://localhost:5000/api/bookings', bookingDetails, config);
+            await axios.post('https://hidden-gems-backend-q048.onrender.com/api/bookings', bookingDetails, config);
             
             setBookingSuccess('Booking Request Sent! Check "My Bookings" for status.');
             // Reset form optional
@@ -372,9 +372,9 @@ export default HostDetailsPage;
 //                 setReviewError('');
 
 //                 // Fetch host profile
-//                 const hostPromise = axios.get(`http://localhost:5000/api/host/${id}`);
+//                 const hostPromise = axios.get(`https://hidden-gems-backend-q048.onrender.com/api/host/${id}`);
 //                 // Fetch host reviews
-//                 const reviewPromise = axios.get(`http://localhost:5000/api/hosts/${id}/reviews`);
+//                 const reviewPromise = axios.get(`https://hidden-gems-backend-q048.onrender.com/api/hosts/${id}/reviews`);
 
 //                 // Wait for both
 //                 const [hostResponse, reviewResponse] = await Promise.all([
@@ -410,7 +410,7 @@ export default HostDetailsPage;
 //                         'Cache-Control': 'no-cache',
 //                     },
 //                 };
-//                 const { data } = await axios.get('http://localhost:5000/api/users/profile', config);
+//                 const { data } = await axios.get('https://hidden-gems-backend-q048.onrender.com/api/users/profile', config);
 //                 setUserProfile(data);
 //             } catch (err) {
 //                 console.error('Could not fetch user profile for booking check', err);
@@ -516,7 +516,7 @@ export default HostDetailsPage;
 //                 totalPrice: totalPrice, // Total calculated price bhejein
 //             };
 
-//             await axios.post('http://localhost:5000/api/bookings', bookingDetails, config);
+//             await axios.post('https://hidden-gems-backend-q048.onrender.com/api/bookings', bookingDetails, config);
             
 //             setBookingLoading(false);
 //             setBookingError('');
@@ -605,7 +605,7 @@ export default HostDetailsPage;
 //     //         };
 
 //     //         await axios.post(
-//     //             'http://localhost:5000/api/bookings',
+//     //             'https://hidden-gems-backend-q048.onrender.com/api/bookings',
 //     //             bookingDetails,
 //     //             config
 //     //         );

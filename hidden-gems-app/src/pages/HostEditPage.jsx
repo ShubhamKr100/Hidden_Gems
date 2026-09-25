@@ -57,7 +57,7 @@
 //         };
 
 //         const { data } = await axios.get(
-//           'http://localhost:5000/api/host/myprofile',
+//           'https://hidden-gems-backend-q048.onrender.com/api/host/myprofile',
 //           config
 //         );
 
@@ -109,7 +109,7 @@
 
 //       // Naye PUT route ko call karo
 //       await axios.put(
-//         'http://localhost:5000/api/host/myprofile',
+//         'https://hidden-gems-backend-q048.onrender.com/api/host/myprofile',
 //         updatedData,
 //         config
 //       );
@@ -248,7 +248,7 @@ function HostEditPage() {
         };
 
         const { data } = await axios.get(
-          'http://localhost:5000/api/host/myprofile',
+          'https://hidden-gems-backend-q048.onrender.com/api/host/myprofile',
           config
         );
 
@@ -306,7 +306,7 @@ function HostEditPage() {
       };
 
       await axios.put(
-        'http://localhost:5000/api/host/myprofile',
+        'https://hidden-gems-backend-q048.onrender.com/api/host/myprofile',
         updatedData,
         config
       );

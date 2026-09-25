@@ -17,7 +17,7 @@ function PaymentSuccessPage() {
         };
 
         // Backend ko batao ki payment success ho gaya aur DB update karo
-        await axios.put(`http://localhost:5000/api/bookings/${id}/pay`, {}, config);
+        await axios.put(`https://hidden-gems-backend-q048.onrender.com/api/bookings/${id}/pay`, {}, config);
         
         setLoading(false);
         // 3 second baad automatic My Bookings page pe bhej do

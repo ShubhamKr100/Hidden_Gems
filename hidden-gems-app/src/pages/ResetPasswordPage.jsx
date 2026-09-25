@@ -25,7 +25,7 @@ function ResetPasswordPage() {
     setSuccess('');
 
     try {
-      const { data } = await axios.put(`http://localhost:5000/api/users/resetpassword/${token}`, { password });
+      const { data } = await axios.put(`https://hidden-gems-backend-q048.onrender.com/api/users/resetpassword/${token}`, { password });
       setSuccess(data.message);
       setLoading(false);
 

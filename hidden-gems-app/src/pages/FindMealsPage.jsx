@@ -26,7 +26,7 @@ function FindMealsPage() {
     try {
       // Naye search API ko call karo
       const { data } = await axios.get(
-        `http://localhost:5000/api/host/search?city=${query}`
+        `https://hidden-gems-backend-q048.onrender.com/api/host/search?city=${query}`
       );
       setResults(data);
 

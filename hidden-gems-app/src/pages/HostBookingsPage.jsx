@@ -28,7 +28,7 @@ function HostBookingsPage() {
 
       // Fetch bookings for the host
       const { data } = await axios.get(
-        'http://localhost:5000/api/bookings/host',
+        'https://hidden-gems-backend-q048.onrender.com/api/bookings/host',
         config
       );
 
@@ -63,7 +63,7 @@ function HostBookingsPage() {
 
       // Send PUT request to update status
       await axios.put(
-        `http://localhost:5000/api/bookings/${bookingId}/status`,
+        `https://hidden-gems-backend-q048.onrender.com/api/bookings/${bookingId}/status`,
         { status: newStatus }, // Send the new status in the body
         config
       );

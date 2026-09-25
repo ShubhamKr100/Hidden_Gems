@@ -34,7 +34,7 @@ function ReviewForm({ hostId, bookingId, onReviewSubmit }) {
       };
 
       await axios.post(
-        `http://localhost:5000/api/hosts/${hostId}/reviews`,
+        `https://hidden-gems-backend-q048.onrender.com/api/hosts/${hostId}/reviews`,
         { rating, comment }, // Send the rating (can be float like 3.5)
         config
       );

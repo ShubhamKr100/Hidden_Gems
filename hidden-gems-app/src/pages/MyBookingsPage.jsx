@@ -35,7 +35,7 @@
 //       };
 
 //       const { data } = await axios.get(
-//         'http://localhost:5000/api/bookings/mybookings',
+//         'https://hidden-gems-backend-q048.onrender.com/api/bookings/mybookings',
 //         config
 //       );
 //       setBookings(data);
@@ -177,7 +177,7 @@ function MyBookingsPage() {
       };
 
       const { data } = await axios.get(
-        'http://localhost:5000/api/bookings/mybookings',
+        'https://hidden-gems-backend-q048.onrender.com/api/bookings/mybookings',
         config
       );
       setBookings(data);
@@ -203,7 +203,7 @@ function MyBookingsPage() {
 
       // Backend se Stripe page ka URL lo
       const { data } = await axios.post(
-        `http://localhost:5000/api/bookings/${bookingId}/checkout`,
+        `https://hidden-gems-backend-q048.onrender.com/api/bookings/${bookingId}/checkout`,
         {},
         config
       );

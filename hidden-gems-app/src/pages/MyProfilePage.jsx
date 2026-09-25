@@ -35,7 +35,7 @@
 //         };
 
 //         const { data } = await axios.get(
-//           'http://localhost:5000/api/users/profile',
+//           'https://hidden-gems-backend-q048.onrender.com/api/users/profile',
 //           config
 //         );
 
@@ -85,7 +85,7 @@
 
 //       // Naye PUT route ko call karo
 //       const { data } = await axios.put(
-//         'http://localhost:5000/api/users/profile',
+//         'https://hidden-gems-backend-q048.onrender.com/api/users/profile',
 //         updatedData,
 //         config
 //       );
@@ -195,7 +195,7 @@ function MyProfilePage() {
         };
 
         const { data } = await axios.get(
-          'http://localhost:5000/api/users/profile',
+          'https://hidden-gems-backend-q048.onrender.com/api/users/profile',
           config
         );
 
@@ -244,7 +244,7 @@ function MyProfilePage() {
       };
 
       const { data } = await axios.put(
-        'http://localhost:5000/api/users/profile',
+        'https://hidden-gems-backend-q048.onrender.com/api/users/profile',
         updatedData,
         config
       );

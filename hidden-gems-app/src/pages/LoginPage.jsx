@@ -24,7 +24,7 @@
 // //       };
 
 // //       const { data } = await axios.post(
-// //         'http://localhost:5000/api/users/login',
+// //         'https://hidden-gems-backend-q048.onrender.com/api/users/login',
 // //         { email, password },
 // //         config
 // //       );
@@ -105,7 +105,7 @@
 //       };
 
 //       const { data } = await axios.post(
-//         'http://localhost:5000/api/users/login',
+//         'https://hidden-gems-backend-q048.onrender.com/api/users/login',
 //         { email, password },
 //         config
 //       );
@@ -194,7 +194,7 @@ function LoginPage() {
       };
 
       const { data } = await axios.post(
-        'http://localhost:5000/api/users/login',
+        'https://hidden-gems-backend-q048.onrender.com/api/users/login',
         { email, password },
         config
       );

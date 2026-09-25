@@ -77,7 +77,7 @@ function BecomeHostPage() {
 
       // 3. Backend API ko call karo
       const { data } = await axios.post(
-        'http://localhost:5000/api/host/register',
+        'https://hidden-gems-backend-q048.onrender.com/api/host/register',
         hostData,
         config
       );
@@ -127,7 +127,7 @@ function BecomeHostPage() {
 
 //       // 3. Backend API ko call karo
 //       const { data } = await axios.post(
-//         'http://localhost:5000/api/host/register', // Yeh API hum agle step mein banayenge
+//         'https://hidden-gems-backend-q048.onrender.com/api/host/register', // Yeh API hum agle step mein banayenge
 //         hostData,
 //         config
 //       );

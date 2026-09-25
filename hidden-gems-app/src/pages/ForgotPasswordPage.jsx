@@ -15,7 +15,7 @@ function ForgotPasswordPage() {
     setSuccess('');
 
     try {
-      const { data } = await axios.post('http://localhost:5000/api/users/forgotpassword', { email });
+      const { data } = await axios.post('https://hidden-gems-backend-q048.onrender.com/api/users/forgotpassword', { email });
       setSuccess(data.message);
       setLoading(false);
     } catch (err) {

@@ -32,7 +32,7 @@
 //       };
 
 //       const { data } = await axios.post(
-//         'http://localhost:5000/api/users/register',
+//         'https://hidden-gems-backend-q048.onrender.com/api/users/register',
 //         { name, email, password },
 //         config
 //       );
@@ -137,7 +137,7 @@ function RegisterPage() {
       };
 
       const { data } = await axios.post(
-        'http://localhost:5000/api/users/register',
+        'https://hidden-gems-backend-q048.onrender.com/api/users/register',
         { name, email, password },
         config
       );
