@@ -56,9 +56,15 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 // import SpotDetailsPage from './pages/SpotDetailsPage';
 
+// import ForgotPasswordPage from './pages/ForgotPasswordPage';
+// import ResetPasswordPage from './pages/ResetPasswordPage';   // <- -----------------------
+
 // --- Pages (Authentication) ---
-import LoginPage from './pages/LoginPage';
+import LoginPage from './pages/LoginPage'; // C:\Users\shubh\HiddenGemsProject\backend\models\Booking.js
 import RegisterPage from './pages/RegisterPage';
+
+import ForgotPasswordPage from './pages/ForgotPasswordPage'; // <-- YEH ADD KAREIN
+import ResetPasswordPage from './pages/ResetPasswordPage';   // <-- YEH ADD KAREIN
 
 // --- Pages (NAYE "Kitchens" FEATURE KE) ---
 import BecomeHostPage from './pages/BecomeHostPage';
@@ -71,6 +77,8 @@ import HostDetailsPage from './pages/HostDetailsPage'; // <-- NAYA IMPORT
 import MyBookingsPage from './pages/MyBookingsPage'; // <-- NAYA IMPORT
 import MyProfilePage from './pages/MyProfilePage'; // <-- NAYA IMPORT
 import HostBookingsPage from './pages/HostBookingsPage'; // <-- Import new page
+
+import PaymentSuccessPage from './pages/PaymentSuccessPage';
 
 
 // import FindMealsPage from './pages/FindMealsPage'; // Hum yeh page agle step mein banayenge
@@ -104,7 +112,10 @@ function App() {
           <Route path="/my-kitchen/edit" element={<HostEditPage />} />
 
           <Route path="/host/:id" element={<HostDetailsPage />} />
-          <Route path="/mybookings" element={<MyBookingsPage />} />
+          {/* <Route path="/mybookings" element={<MyBookingsPage />} />
+           */}
+           <Route path="/mybookings" element={<MyBookingsPage />} />
+<Route path="/my-bookings" element={<MyBookingsPage />} />
 
 
           <Route path="/profile" element={<MyProfilePage />} />
@@ -117,6 +128,11 @@ function App() {
           {/* <Route path="/meals" element={<FindMealsPage />} /> */}
           {/* <Route path="/my-kitchen" element={<MyKitchenPage />} /> */}
           {/* <Route path="/host/:id" element={<HostDetailsPage />} /> */}
+
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+<Route path="/reset-password/:token" element={<ResetPasswordPage />} />
+
+          <Route path="/payment-success/:id" element={<PaymentSuccessPage />} /> 
 
         </Routes>
       </main>
