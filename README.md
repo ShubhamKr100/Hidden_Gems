@@ -1,60 +1,39 @@
-Hidden Gems
-Hidden Gems is a comprehensive full-stack web application designed to connect users with local culinary hosts. The platform allows users to discover authentic, home-hosted dining experiences, book meals, and leave reviews, while empowering hosts to manage their kitchen profiles and incoming bookings.   
-ZIP
-+ 1
+# Hidden Gems
 
-🚀 Key Features
-User Authentication & Security: Secure registration, login, password reset, and forgotten password workflows utilizing JWT tokens (generateToken.js) and secure middleware (authMiddleware.js).   
-ZIP
+**Hidden Gems** is a comprehensive full-stack web application designed to connect users with local culinary hosts. The platform allows users to discover authentic, home-hosted dining experiences, book meals, and leave reviews, while empowering hosts to manage their kitchen profiles and incoming bookings.
 
-Host Management: Dedicated interfaces for users to become hosts (BecomeHostPage.jsx), manage their kitchen (MyKitchenPage.jsx), edit host details (HostEditPage.jsx), and track reservations (HostBookingsPage.jsx).   
-ZIP
+## 🚀 Key Features
 
-Discovery & Booking System: Interactive discovery of meals (FindMealsPage.jsx) and a complete booking lifecycle from reservation to payment confirmation (PaymentSuccessPage.jsx, MyBookingsPage.jsx).   
-ZIP
+*   **User Authentication & Security:** Secure registration, login, password reset, and forgotten password workflows utilizing JWT tokens (`generateToken.js`) and secure middleware (`authMiddleware.js`).
+*   **Host Management:** Dedicated interfaces for users to become hosts (`BecomeHostPage.jsx`), manage their kitchen (`MyKitchenPage.jsx`), edit host details (`HostEditPage.jsx`), and track reservations (`HostBookingsPage.jsx`).
+*   **Discovery & Booking System:** Interactive discovery of meals (`FindMealsPage.jsx`) and a complete booking lifecycle from reservation to payment confirmation (`PaymentSuccessPage.jsx`, `MyBookingsPage.jsx`)[cite: 1].
+*   **Review & Rating Engine:** Integrated review system (`ReviewForm.jsx`) mapped to database models (`Review.js`) for community trust and feedback[cite: 1].
+*   **AI Integration:** Embedded artificial intelligence features handled via backend controllers (`aiController.js`, `test-ai.js`) to enhance user experience or search capabilities[cite: 1].
+*   **Automated Notifications:** Built-in email service (`sendEmail.js`) for sending transactional updates and alerts[cite: 1].
 
-Review & Rating Engine: Integrated review system (ReviewForm.jsx) mapped to database models (Review.js) for community trust and feedback.   
-ZIP
+## 🛠 Tech Stack
 
-AI Integration: Embedded artificial intelligence features handled via backend controllers (aiController.js, test-ai.js) to enhance user experience or search capabilities.   
-ZIP
+*   **Frontend:** React, Vite, HTML/CSS[cite: 1]
+*   **Backend:** Node.js, Express.js[cite: 1]
+*   **Database:** (Implied Document/SQL Database via Mongoose/Sequelize models)[cite: 1]
+*   **Architecture:** RESTful API with distinct client-server separation[cite: 1]
 
-Automated Notifications: Built-in email service (sendEmail.js) for sending transactional updates and alerts.   
-ZIP
+## 🏗 System Architecture
 
-🛠 Tech Stack
-Frontend: React, Vite, HTML/CSS   
-ZIP
+The project follows a standard decoupled Client-Server architecture[cite: 1]. 
 
-Backend: Node.js, Express.js   
-ZIP
+1.  **Presentation Tier (React Client):** Handles state management, UI rendering, and client-side routing. All external API communications are centralized through `api.js`[cite: 1].
+2.  **Application Tier (Node.js/Express Backend):** Handles business logic, request validation (`errorMiddleware.js`), and authentication routing (`index.js`)[cite: 1].
+3.  **Data Tier (Models):** Maps application objects to database collections/tables (`User.js`, `HostProfile.js`, `Booking.js`, `Review.js`)[cite: 1].
 
-Database: (Implied Document/SQL Database via Mongoose/Sequelize models)   
-ZIP
+### Directory Structure
 
-Architecture: RESTful API with distinct client-server separation   
-ZIP
-
-🏗 System Architecture
-The project follows a standard decoupled Client-Server architecture.   
-ZIP
-
-Presentation Tier (React Client): Handles state management, UI rendering, and client-side routing. All external API communications are centralized through api.js.   
-ZIP
-
-Application Tier (Node.js/Express Backend): Handles business logic, request validation (errorMiddleware.js), and authentication routing (index.js).   
-ZIP
-
-Data Tier (Models): Maps application objects to database collections/tables (User.js, HostProfile.js, Booking.js, Review.js).   
-ZIP
-
-Directory Structure
-Plaintext
+```text
 Hidden_Gems/
-├── backend/                        # Node.js Express API Server
-│   ├── controllers/                # Request handlers and business logic
-│   │   └── aiController.js         # AI feature integration
-│   ├── middleware/                 # Custom Express middlewares
+├── backend/                        # Node.js Express API Server[cite: 1]
+│   ├── controllers/                # Request handlers and business logic[cite: 1]
+│   │   └── aiController.js         # AI feature integration[cite: 1]
+│   ├── middleware/                 # Custom Express middlewares[cite: 1]
 │   │   ├── authMiddleware.js       # JWT validation and route protection[cite: 1]
 │   │   └── errorMiddleware.js      # Global error handling[cite: 1]
 │   ├── models/                     # Database schema definitions[cite: 1]
@@ -88,46 +67,3 @@ Hidden_Gems/
     │   └── main.jsx                # React DOM rendering entry point[cite: 1]
     ├── index.html                  # HTML template[cite: 1]
     └── vite.config.js              # Vite bundler configuration[cite: 1]
-⚙️ Getting Started
-Prerequisites
-Node.js (v16 or higher recommended)
-
-npm or yarn package manager
-
-Running instance of your database (e.g., MongoDB, PostgreSQL)
-
-Environment Variables
-You will need to set up .env files in both the frontend and backend directories[cite: 1].
-
-Frontend (hidden-gems-app/.env)[cite: 1]:
-
-Code snippet
-VITE_API_URL=https://hidden-gems-backend-q048.onrender.com/api 
-# (Update to http://localhost:PORT for local development)
-Backend (backend/.env)[cite: 1]:
-
-Code snippet
-PORT=5000
-DB_URI=
-JWT_SECRET=
-EMAIL_HOST=
-EMAIL_USER=
-EMAIL_PASS=
-(Note: Add any AI provider API keys if required by aiController.js[cite: 1])
-
-Installation & Execution
-Clone the repository
-
-Start the Backend Server
-
-Bash
-cd backend
-npm install
-npm start # or npm run dev for nodemon
-Start the Frontend Application
-
-Bash
-cd hidden-gems-app
-npm install
-npm run dev
-Access the App: Open your browser and navigate to the localhost port provided by Vite (usually http://localhost:5173).
